@@ -34,8 +34,8 @@
 }
 
 .table-wrapper {
-border: 10px lime solid;
-margin-bottom: 1rem;
+  border: 10px lime solid;
+  margin-bottom: 1rem;
 }
 
 ul {
@@ -48,11 +48,12 @@ ul {
 
 .country-name {
   padding-top: 1rem;
-  
 }
 
 .table {
   border: 1px black solid;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 .result-row {
@@ -67,7 +68,3 @@ ul {
 .score-holder {
   color: red;
 }
-
-
-
-
