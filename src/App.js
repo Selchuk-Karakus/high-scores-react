@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./App.css";
 import Data from "./data/scores";
 import HighScoresTable from "./HighScoresTable";
+import WordWideTable from "./WorldWideTable";
 
 function App() {
   const [isOrdered, setIsOrdered] = useState(true);
 
-  let alphabeticalCountryOrder = Data.sort((a, b) => {
+  let alphabeticalCountryOrder = [...Data].sort((a, b) => {
     return a.name < b.name ? -1 : 1;
   });
 
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className="main-container">
+      <WordWideTable data={Data}/>
       <button className="button" onClick={handleClick}>Reverse Player Score Order</button>
       <HighScoresTable scores={alphabeticalCountryOrder} />
     </div>
