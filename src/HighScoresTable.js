@@ -1,9 +1,11 @@
 import React from "react";
+import PlayerScore from "./PlayerScore";
 
 const HighScoresTable = ({ scores }) => {
   let sorted = scores.sort((a, b) => {
     return a.name < b.name ? -1 : 1;
   });
+
   return (
     <div className="main-container">
       <h1 className="main-header">High Scores per Country</h1>
@@ -12,20 +14,7 @@ const HighScoresTable = ({ scores }) => {
           <div key={ind} className="table-wrapper">
             <h3 className="country-name">HIGH SCORES: {name}</h3>
             <ul className="table">
-              {scores
-                .sort((personA, personB) => {
-                  return personA.s > personB.s ? -1 : 1;
-                })
-                .map((person, ind) => {
-                  return (
-                    <li key={ind} className="result-row">
-                      <span className="name-holder">
-                        {person.n.toUpperCase()}{" "}
-                      </span>
-                      <span className="score-holder">{person.s}</span>
-                    </li>
-                  );
-                })}
+              <PlayerScore data={scores} />
             </ul>
           </div>
         );

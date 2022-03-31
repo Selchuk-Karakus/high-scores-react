@@ -28,6 +28,7 @@
   text-align: center;
   width: 32rem;
   margin: auto;
+  display: grid;
 }
 .score-placeholder {
   margin-right: auto;
@@ -67,4 +68,20 @@ ul {
 
 .score-holder {
   color: red;
+}
+
+.button {
+  background-color: lime;
+  color: blue;
+  font-weight: 900;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: .4rem;
+}
+
+.button:hover {
+  background-color: rgb(39, 164, 83);
+  color: white;
 }
